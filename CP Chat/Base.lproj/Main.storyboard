@@ -138,10 +138,10 @@
             </objects>
             <point key="canvasLocation" x="3150" y="179"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Chat Table View Controller-->
         <scene sceneID="8fN-g3-ZcQ">
             <objects>
-                <tableViewController id="lwv-OR-JxA" sceneMemberID="viewController">
+                <tableViewController id="lwv-OR-JxA" customClass="ChatTableViewController" customModule="CP_Chat" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="TLM-Td-6tx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
