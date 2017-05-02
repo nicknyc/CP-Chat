@@ -8,12 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B589F93A1EB857D500868D12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589F9391EB857D500868D12 /* AppDelegate.swift */; };
-		B589F93C1EB857D500868D12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589F93B1EB857D500868D12 /* ViewController.swift */; };
 		B589F93F1EB857D500868D12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B589F93D1EB857D500868D12 /* Main.storyboard */; };
 		B589F9411EB857D500868D12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B589F9401EB857D500868D12 /* Assets.xcassets */; };
 		B589F9441EB857D500868D12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B589F9421EB857D500868D12 /* LaunchScreen.storyboard */; };
 		B589F94C1EB85D8E00868D12 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589F94B1EB85D8D00868D12 /* SignInViewController.swift */; };
-		B589F94F1EB87EB900868D12 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589F94E1EB87EB900868D12 /* MoreViewController.swift */; };
 		B589F9511EB8874D00868D12 /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589F9501EB8874C00868D12 /* ContactTableViewController.swift */; };
 		B589F9531EB88CF500868D12 /* CpMobileApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589F9521EB88CF500868D12 /* CpMobileApi.swift */; };
 /* End PBXBuildFile section */
@@ -21,13 +19,11 @@
 /* Begin PBXFileReference section */
 		B589F9361EB857D500868D12 /* CP Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CP Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B589F9391EB857D500868D12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B589F93B1EB857D500868D12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B589F93E1EB857D500868D12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B589F9401EB857D500868D12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B589F9431EB857D500868D12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B589F9451EB857D500868D12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B589F94B1EB85D8D00868D12 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = ViewController/SignInViewController.swift; sourceTree = "<group>"; };
-		B589F94E1EB87EB900868D12 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoreViewController.swift; path = ViewController/MoreViewController.swift; sourceTree = "<group>"; };
 		B589F9501EB8874C00868D12 /* ContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactTableViewController.swift; path = ViewController/ContactTableViewController.swift; sourceTree = "<group>"; };
 		B589F9521EB88CF500868D12 /* CpMobileApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CpMobileApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,9 +72,7 @@
 		B589F94D1EB85D9900868D12 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B589F93B1EB857D500868D12 /* ViewController.swift */,
 				B589F94B1EB85D8D00868D12 /* SignInViewController.swift */,
-				B589F94E1EB87EB900868D12 /* MoreViewController.swift */,
 				B589F9501EB8874C00868D12 /* ContactTableViewController.swift */,
 			);
 			name = ViewController;
@@ -157,8 +151,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B589F93C1EB857D500868D12 /* ViewController.swift in Sources */,
-				B589F94F1EB87EB900868D12 /* MoreViewController.swift in Sources */,
 				B589F9511EB8874D00868D12 /* ContactTableViewController.swift in Sources */,
 				B589F93A1EB857D500868D12 /* AppDelegate.swift in Sources */,
 				B589F94C1EB85D8E00868D12 /* SignInViewController.swift in Sources */,

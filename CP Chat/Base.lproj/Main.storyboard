@@ -75,31 +75,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.875" y="178.52112676056339"/>
-        </scene>
-        <!--CP Chat-->
-        <scene sceneID="boU-qE-gmI">
-            <objects>
-                <viewController id="mNK-ZC-sgz" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="rxy-iQ-wdt"/>
-                        <viewControllerLayoutGuide type="bottom" id="kJp-2E-JlS"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="imR-2U-EZ6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="CP Chat" id="fQ0-Kz-ChN"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ni6-1b-I7B" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2085" y="1387"/>
+            <point key="canvasLocation" x="2085" y="-637"/>
         </scene>
         <!--CP Chat-->
         <scene sceneID="LeV-8I-4ph">
             <objects>
-                <tableViewController id="FfZ-oq-oxB" customClass="ContactTableViewController" customModule="CP_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="FfZ-oq-oxB" customClass="ContactTableViewController" customModule="CP_Chat" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="60" sectionHeaderHeight="18" sectionFooterHeight="18" id="bZh-ee-ddd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,93 +104,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nmo-fO-VcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2085" y="687"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="563-Oc-x0l">
-            <objects>
-                <tabBarController storyboardIdentifier="mainMenu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r8C-KT-XxY" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="i3u-cx-e2g">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="dCm-6K-isi" kind="relationship" relationship="viewControllers" id="wry-8y-plA"/>
-                        <segue destination="iLv-8c-hzV" kind="relationship" relationship="viewControllers" id="5g9-Nw-TON"/>
-                        <segue destination="NzH-Q3-VMs" kind="relationship" relationship="viewControllers" id="ogS-LB-g9B"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v8G-bI-I31" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="137" y="970"/>
-        </scene>
-        <!--CP Chat-->
-        <scene sceneID="X2V-hg-ITn">
-            <objects>
-                <viewController storyboardIdentifier="mainView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gBf-TP-wlJ" customClass="MoreViewController" customModule="CP_Chat" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="eub-Px-XbP"/>
-                        <viewControllerLayoutGuide type="bottom" id="u0a-Bf-1IN"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fzu-hp-YhB">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94m-uc-6TL">
-                                <rect key="frame" x="16" y="72" width="288" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zm-Ah-emp">
-                                <rect key="frame" x="116" y="439" width="88" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="88" id="tco-DB-gIz"/>
-                                </constraints>
-                                <state key="normal" title="Sign out">
-                                    <color key="titleColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="signOutButtonClicked:" destination="gBf-TP-wlJ" eventType="touchUpInside" id="ivH-Bc-eCE"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Session ID" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Law-Cb-IG7">
-                                <rect key="frame" x="16" y="97" width="288" height="334"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Law-Cb-IG7" firstAttribute="top" secondItem="94m-uc-6TL" secondAttribute="bottom" constant="8" symbolic="YES" id="0CM-fG-JgG"/>
-                            <constraint firstItem="94m-uc-6TL" firstAttribute="trailing" secondItem="fzu-hp-YhB" secondAttribute="trailingMargin" id="2h3-8E-E2G"/>
-                            <constraint firstItem="7zm-Ah-emp" firstAttribute="leading" secondItem="fzu-hp-YhB" secondAttribute="leadingMargin" constant="100" id="64y-ZR-p2r"/>
-                            <constraint firstItem="Law-Cb-IG7" firstAttribute="trailing" secondItem="94m-uc-6TL" secondAttribute="trailing" id="6JX-u9-BvE"/>
-                            <constraint firstItem="7zm-Ah-emp" firstAttribute="top" secondItem="Law-Cb-IG7" secondAttribute="bottom" constant="8" symbolic="YES" id="EKp-Ga-H9H"/>
-                            <constraint firstItem="7zm-Ah-emp" firstAttribute="centerX" secondItem="94m-uc-6TL" secondAttribute="centerX" id="EhS-vV-6r8"/>
-                            <constraint firstItem="94m-uc-6TL" firstAttribute="top" secondItem="eub-Px-XbP" secondAttribute="bottom" constant="8" id="Y0M-1P-Zm2"/>
-                            <constraint firstItem="Law-Cb-IG7" firstAttribute="leading" secondItem="94m-uc-6TL" secondAttribute="leading" id="b1O-s5-XoP"/>
-                            <constraint firstItem="u0a-Bf-1IN" firstAttribute="top" secondItem="7zm-Ah-emp" secondAttribute="bottom" constant="50" id="iPb-Zg-Y2c"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7zm-Ah-emp" secondAttribute="trailing" constant="100" id="qRM-Iz-1Q8"/>
-                            <constraint firstItem="94m-uc-6TL" firstAttribute="leading" secondItem="fzu-hp-YhB" secondAttribute="leadingMargin" id="w66-u1-x1p"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="CP Chat" id="ywm-1l-2UM"/>
-                    <connections>
-                        <outlet property="sessionIdField" destination="Law-Cb-IG7" id="uVC-MT-vgj"/>
-                        <outlet property="usernameLabel" destination="94m-uc-6TL" id="3AZ-ms-mG1"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qGO-oO-9LE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2085" y="2113.7323943661972"/>
+            <point key="canvasLocation" x="2085" y="179"/>
         </scene>
         <!--Friends-->
         <scene sceneID="7D4-wj-M77">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dCm-6K-isi" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="mainMenu" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dCm-6K-isi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Friends" id="f2y-RW-as8"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gt3-Ty-Npe">
@@ -223,45 +123,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TyQ-la-5Lm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1087.5" y="686.61971830985919"/>
-        </scene>
-        <!--More-->
-        <scene sceneID="otQ-00-ya1">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NzH-Q3-VMs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="More" id="WZk-vi-VwY"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1ao-4g-eqf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="gBf-TP-wlJ" kind="relationship" relationship="rootViewController" id="Grp-YH-oIH"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8IZ-eL-56J" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1088" y="2114"/>
-        </scene>
-        <!--Chats-->
-        <scene sceneID="GOc-NH-CmJ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iLv-8c-hzV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Chats" id="zmm-Yw-J4a"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Sm-f1-iay">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="mNK-ZC-sgz" kind="relationship" relationship="rootViewController" id="kCo-sL-Nvk"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="w4a-3a-JlO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1088" y="1388"/>
+            <point key="canvasLocation" x="1127" y="179"/>
         </scene>
     </scenes>
 </document>

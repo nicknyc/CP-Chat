@@ -12,11 +12,14 @@ class ContactTableViewController: UITableViewController {
     
     var contacts:[String] = []
     let sessionId = UserDefaults.standard.string(forKey: "sessionId")!
-    let sectionHeader = ["Mobile Application Class"]
+    let sectionHeader = ["Contact"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.getContactList()
+        
+        let action = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(actionTapped))
+        navigationItem.rightBarButtonItems = [action]
     }
 
     // MARK: - Table view data source
@@ -81,5 +84,20 @@ class ContactTableViewController: UITableViewController {
         let doneAction = UIAlertAction(title: "Done", style: .default, handler: nil)
         alert.addAction(doneAction)
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func actionTapped(){
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let signOutAction = UIAlertAction(title: "Sign out", style: .destructive, handler: {_ in
+            UserDefaults.standard.set("", forKey: "sessionId")
+            UserDefaults.standard.set(false, forKey: "isUserSignIn")
+            UserDefaults.standard.synchronize();
+            let viewController = self.storyboard!.instantiateViewController(withIdentifier: "signIn")
+            self.present(viewController, animated: true, completion: nil)
+        })
+        actionSheet.addAction(signOutAction)
+        actionSheet.addAction(cancelAction)
+        self.present(actionSheet, animated: true, completion: nil)
     }
 }
