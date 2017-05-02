@@ -69,6 +69,7 @@
                     </view>
                     <connections>
                         <outlet property="passwordField" destination="6bF-uZ-ZOL" id="nBn-ed-E75"/>
+                        <outlet property="signInButton" destination="Zsa-pi-pHW" id="EsF-3K-FY0"/>
                         <outlet property="usernameField" destination="cec-tV-lAA" id="saX-cS-SyZ"/>
                     </connections>
                 </viewController>
