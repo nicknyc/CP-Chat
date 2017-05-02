@@ -14,6 +14,7 @@
 		B589F94C1EB85D8E00868D12 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589F94B1EB85D8D00868D12 /* SignInViewController.swift */; };
 		B589F9511EB8874D00868D12 /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589F9501EB8874C00868D12 /* ContactTableViewController.swift */; };
 		B589F9531EB88CF500868D12 /* CpMobileApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589F9521EB88CF500868D12 /* CpMobileApi.swift */; };
+		B589F9551EB8A34B00868D12 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589F9541EB8A34B00868D12 /* SearchTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B589F94B1EB85D8D00868D12 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = ViewController/SignInViewController.swift; sourceTree = "<group>"; };
 		B589F9501EB8874C00868D12 /* ContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactTableViewController.swift; path = ViewController/ContactTableViewController.swift; sourceTree = "<group>"; };
 		B589F9521EB88CF500868D12 /* CpMobileApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CpMobileApi.swift; sourceTree = "<group>"; };
+		B589F9541EB8A34B00868D12 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchTableViewController.swift; path = ViewController/SearchTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			children = (
 				B589F94B1EB85D8D00868D12 /* SignInViewController.swift */,
 				B589F9501EB8874C00868D12 /* ContactTableViewController.swift */,
+				B589F9541EB8A34B00868D12 /* SearchTableViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			files = (
 				B589F9511EB8874D00868D12 /* ContactTableViewController.swift in Sources */,
 				B589F93A1EB857D500868D12 /* AppDelegate.swift in Sources */,
+				B589F9551EB8A34B00868D12 /* SearchTableViewController.swift in Sources */,
 				B589F94C1EB85D8E00868D12 /* SignInViewController.swift in Sources */,
 				B589F9531EB88CF500868D12 /* CpMobileApi.swift in Sources */,
 			);

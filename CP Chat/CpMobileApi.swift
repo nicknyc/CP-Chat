@@ -12,6 +12,7 @@ import UIKit
 class CpMobileApi {
     static let signInURL = URL(string: "https://mis.cp.eng.chula.ac.th/mobile/service.php?q=api/signIn")
     static let getContactListUrl = URL(string: "https://mis.cp.eng.chula.ac.th/mobile/service.php?q=api/getContact")
+    static let searchUserUrl = URL(string: "https://mis.cp.eng.chula.ac.th/mobile/service.php?q=api/searchUser")
     //let session = URLSession.shared
 
     /*func makeRequest(url:URL, params:String) -> AnyObject{

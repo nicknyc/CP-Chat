@@ -101,10 +101,41 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="CP Chat" id="oyl-VP-CjK"/>
+                    <connections>
+                        <segue destination="rdc-LS-mHN" kind="show" identifier="addUser" id="KMH-qM-IgN"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nmo-fO-VcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2085" y="179"/>
+        </scene>
+        <!--Add friends-->
+        <scene sceneID="rDY-Vz-bJu">
+            <objects>
+                <tableViewController title="Add friends" id="rdc-LS-mHN" customClass="SearchTableViewController" customModule="CP_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="4nO-Ox-cmj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" id="jdb-sN-IuB">
+                                <rect key="frame" x="0.0" y="28" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jdb-sN-IuB" id="UQH-Mx-PD1">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rdc-LS-mHN" id="xhZ-Wf-1pS"/>
+                            <outlet property="delegate" destination="rdc-LS-mHN" id="gtv-R2-TRt"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eSO-zb-bfR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3150" y="179"/>
         </scene>
         <!--Friends-->
         <scene sceneID="7D4-wj-M77">

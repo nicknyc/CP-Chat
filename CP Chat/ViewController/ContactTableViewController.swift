@@ -12,7 +12,7 @@ class ContactTableViewController: UITableViewController {
     
     var contacts:[String] = []
     let sessionId = UserDefaults.standard.string(forKey: "sessionId")!
-    let sectionHeader = ["Contact"]
+    let sectionHeader = ["Friends"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,6 +79,9 @@ class ContactTableViewController: UITableViewController {
         return self.sectionHeader[section]
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    }
+    
     func errorHandle(error:String){
         let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
         let doneAction = UIAlertAction(title: "Done", style: .default, handler: nil)
@@ -88,6 +91,7 @@ class ContactTableViewController: UITableViewController {
     
     func actionTapped(){
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         let signOutAction = UIAlertAction(title: "Sign out", style: .destructive, handler: {_ in
             UserDefaults.standard.set("", forKey: "sessionId")
@@ -96,8 +100,15 @@ class ContactTableViewController: UITableViewController {
             let viewController = self.storyboard!.instantiateViewController(withIdentifier: "signIn")
             self.present(viewController, animated: true, completion: nil)
         })
+        let addContactAction = UIAlertAction(title: "Add friends", style: .default, handler: {_ in
+            self.performSegue(withIdentifier: "addUser", sender: self)
+        })
+        
+        actionSheet.addAction(addContactAction)
         actionSheet.addAction(signOutAction)
         actionSheet.addAction(cancelAction)
         self.present(actionSheet, animated: true, completion: nil)
     }
+    
+    
 }
