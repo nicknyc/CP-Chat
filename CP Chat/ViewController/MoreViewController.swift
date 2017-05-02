@@ -10,9 +10,11 @@ import UIKit
 
 class MoreViewController: UIViewController {
     
+    var userId:String?
     var sessionId:String?
     
-    @IBOutlet weak var sessionIdLabel: UILabel!
+    @IBOutlet weak var sessionIdField: UITextView!
+    @IBOutlet weak var usernameLabel: UILabel!
     
     @IBAction func signOutButtonClicked(_ sender: Any) {
         signOutHandle()
@@ -21,14 +23,16 @@ class MoreViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.sessionId = UserDefaults.standard.string(forKey: "sessionId")
-        sessionIdLabel.text = "Session ID: \(self.sessionId!)"
+        self.userId = UserDefaults.standard.string(forKey: "username")
         
-        self.title = UserDefaults.standard.string(forKey: "username")
+        usernameLabel.text = "Username: \(self.userId!)"
+        
+        self.sessionId = UserDefaults.standard.string(forKey: "sessionId")
+        sessionIdField.text = "Session ID: \(sessionId!)"
     }
 
     func signOutHandle() {
-        UserDefaults.standard.set(sessionId, forKey: "")
+        UserDefaults.standard.set("", forKey: "sessionId")
         UserDefaults.standard.set(false, forKey: "isUserSignIn")
         UserDefaults.standard.synchronize();
         let viewController = self.storyboard!.instantiateViewController(withIdentifier: "signIn")
