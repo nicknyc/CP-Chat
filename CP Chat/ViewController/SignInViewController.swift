@@ -21,13 +21,15 @@ class SignInViewController: UIViewController {
     }
     
     func signInHandle(){
-        if(usernameField.text != "" && passwordField.text != ""){
+        let username = usernameField.text!
+        let password = passwordField.text!
+        if(username != "" && password != ""){
             let session = URLSession.shared
             
             var request = URLRequest(url: self.signInUrl!)
             request.httpMethod = "POST"
             
-            let params = "username=\(usernameField.text!)&password=\(passwordField.text!)"
+            let params = "username=\(username)&password=\(password)"
             request.httpBody = params.data(using: String.Encoding.utf8)
             
             self.usernameField.isEnabled = false
@@ -47,7 +49,7 @@ class SignInViewController: UIViewController {
                                 if(json["type"] == "error"){
                                     self.errorHandle(error: json["content"]!)
                                 }else if(json["type"] == "sessionid"){
-                                    self.signInSuccess(sessionId: json["content"]!)
+                                    self.signInSuccess(sessionId: json["content"]!, username: username)
                                     return
                                 }
                             }
@@ -65,11 +67,12 @@ class SignInViewController: UIViewController {
         }
     }
     
-    func signInSuccess(sessionId:String){
+    func signInSuccess(sessionId:String, username:String){
         UserDefaults.standard.set(sessionId, forKey: "sessionId")
         UserDefaults.standard.set(true, forKey: "isUserSignIn")
+        UserDefaults.standard.set(username, forKey: "username")
         UserDefaults.standard.synchronize();
-        let viewController = self.storyboard!.instantiateViewController(withIdentifier: "mainView")
+        let viewController = self.storyboard!.instantiateViewController(withIdentifier: "mainMenu")
         self.present(viewController, animated: true, completion: nil)
     }
     

@@ -13,6 +13,7 @@
 		B589F9411EB857D500868D12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B589F9401EB857D500868D12 /* Assets.xcassets */; };
 		B589F9441EB857D500868D12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B589F9421EB857D500868D12 /* LaunchScreen.storyboard */; };
 		B589F94C1EB85D8E00868D12 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589F94B1EB85D8D00868D12 /* SignInViewController.swift */; };
+		B589F94F1EB87EB900868D12 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589F94E1EB87EB900868D12 /* MoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B589F9431EB857D500868D12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B589F9451EB857D500868D12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B589F94B1EB85D8D00868D12 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = ViewController/SignInViewController.swift; sourceTree = "<group>"; };
+		B589F94E1EB87EB900868D12 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoreViewController.swift; path = ViewController/MoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			children = (
 				B589F93B1EB857D500868D12 /* ViewController.swift */,
 				B589F94B1EB85D8D00868D12 /* SignInViewController.swift */,
+				B589F94E1EB87EB900868D12 /* MoreViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B589F93C1EB857D500868D12 /* ViewController.swift in Sources */,
+				B589F94F1EB87EB900868D12 /* MoreViewController.swift in Sources */,
 				B589F93A1EB857D500868D12 /* AppDelegate.swift in Sources */,
 				B589F94C1EB85D8E00868D12 /* SignInViewController.swift in Sources */,
 			);
