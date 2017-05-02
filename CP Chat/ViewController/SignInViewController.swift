@@ -10,8 +10,6 @@ import UIKit
 
 class SignInViewController: UIViewController {
 
-    let signInUrl = URL(string: "https://mis.cp.eng.chula.ac.th/mobile/service.php?q=api/signIn")
-    
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
@@ -26,15 +24,11 @@ class SignInViewController: UIViewController {
         if(username != "" && password != ""){
             let session = URLSession.shared
             
-            var request = URLRequest(url: self.signInUrl!)
+            var request = URLRequest(url: CpMobileApi.signInURL!)
             request.httpMethod = "POST"
             
             let params = "username=\(username)&password=\(password)"
             request.httpBody = params.data(using: String.Encoding.utf8)
-            
-            self.usernameField.isEnabled = false
-            self.passwordField.isEnabled = false
-            self.signInButton.isEnabled = false
             
             let task = session.dataTask(with: request as URLRequest, completionHandler: {
                 (data, response, error) in
@@ -59,9 +53,6 @@ class SignInViewController: UIViewController {
                 }
             })
             task.resume()
-            self.usernameField.isEnabled = true
-            self.passwordField.isEnabled = true
-            self.signInButton.isEnabled = true
         }else{
             self.errorHandle(error: "Fields cannot be empty!")
         }

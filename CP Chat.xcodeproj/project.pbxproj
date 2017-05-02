@@ -15,6 +15,7 @@
 		B589F94C1EB85D8E00868D12 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589F94B1EB85D8D00868D12 /* SignInViewController.swift */; };
 		B589F94F1EB87EB900868D12 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589F94E1EB87EB900868D12 /* MoreViewController.swift */; };
 		B589F9511EB8874D00868D12 /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589F9501EB8874C00868D12 /* ContactTableViewController.swift */; };
+		B589F9531EB88CF500868D12 /* CpMobileApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589F9521EB88CF500868D12 /* CpMobileApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B589F94B1EB85D8D00868D12 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = ViewController/SignInViewController.swift; sourceTree = "<group>"; };
 		B589F94E1EB87EB900868D12 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoreViewController.swift; path = ViewController/MoreViewController.swift; sourceTree = "<group>"; };
 		B589F9501EB8874C00868D12 /* ContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactTableViewController.swift; path = ViewController/ContactTableViewController.swift; sourceTree = "<group>"; };
+		B589F9521EB88CF500868D12 /* CpMobileApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CpMobileApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				B589F9401EB857D500868D12 /* Assets.xcassets */,
 				B589F9421EB857D500868D12 /* LaunchScreen.storyboard */,
 				B589F9451EB857D500868D12 /* Info.plist */,
+				B589F9521EB88CF500868D12 /* CpMobileApi.swift */,
 			);
 			path = "CP Chat";
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 				B589F9511EB8874D00868D12 /* ContactTableViewController.swift in Sources */,
 				B589F93A1EB857D500868D12 /* AppDelegate.swift in Sources */,
 				B589F94C1EB85D8E00868D12 /* SignInViewController.swift in Sources */,
+				B589F9531EB88CF500868D12 /* CpMobileApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
