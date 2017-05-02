@@ -13,6 +13,7 @@ class CpMobileApi {
     static let signInURL = URL(string: "https://mis.cp.eng.chula.ac.th/mobile/service.php?q=api/signIn")
     static let getContactListUrl = URL(string: "https://mis.cp.eng.chula.ac.th/mobile/service.php?q=api/getContact")
     static let searchUserUrl = URL(string: "https://mis.cp.eng.chula.ac.th/mobile/service.php?q=api/searchUser")
+    static let addContactUrl = URL(string: "https://mis.cp.eng.chula.ac.th/mobile/service.php?q=api/addContact")
     //let session = URLSession.shared
 
     /*func makeRequest(url:URL, params:String) -> AnyObject{
