@@ -81,7 +81,11 @@ class SearchTableViewController: UITableViewController {
                             }else if(json["type"] as! String == "addContact"){
                                 let result = json["content"] as! Bool
                                 if result == true{
-                                    //To-do add callback to reload main page
+                                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
+                                    let alert = UIAlertController(title: "Successful", message: "\(username) has been add to your contact list.", preferredStyle: .alert)
+                                    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                                    alert.addAction(okAction)
+                                    self.present(alert, animated: true, completion: nil)
                                 }else {
                                     self.errorHandle(error: "Something went wrong, please try again.")
                                 }

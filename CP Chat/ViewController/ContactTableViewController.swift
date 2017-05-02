@@ -20,6 +20,8 @@ class ContactTableViewController: UITableViewController {
         
         let action = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(actionTapped))
         navigationItem.rightBarButtonItems = [action]
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(getContactList), name: NSNotification.Name(rawValue: "load"), object: nil)
     }
 
     // MARK: - Table view data source
@@ -81,6 +83,8 @@ class ContactTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
+    
+    
     
     func errorHandle(error:String){
         let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
