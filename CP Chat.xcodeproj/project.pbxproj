@@ -12,6 +12,7 @@
 		B589F93F1EB857D500868D12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B589F93D1EB857D500868D12 /* Main.storyboard */; };
 		B589F9411EB857D500868D12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B589F9401EB857D500868D12 /* Assets.xcassets */; };
 		B589F9441EB857D500868D12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B589F9421EB857D500868D12 /* LaunchScreen.storyboard */; };
+		B589F94C1EB85D8E00868D12 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589F94B1EB85D8D00868D12 /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		B589F9401EB857D500868D12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B589F9431EB857D500868D12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B589F9451EB857D500868D12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B589F94B1EB85D8D00868D12 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = ViewController/SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,23 @@
 		B589F9381EB857D500868D12 /* CP Chat */ = {
 			isa = PBXGroup;
 			children = (
-				B589F9391EB857D500868D12 /* AppDelegate.swift */,
-				B589F93B1EB857D500868D12 /* ViewController.swift */,
+				B589F94D1EB85D9900868D12 /* ViewController */,
 				B589F93D1EB857D500868D12 /* Main.storyboard */,
+				B589F9391EB857D500868D12 /* AppDelegate.swift */,
 				B589F9401EB857D500868D12 /* Assets.xcassets */,
 				B589F9421EB857D500868D12 /* LaunchScreen.storyboard */,
 				B589F9451EB857D500868D12 /* Info.plist */,
 			);
 			path = "CP Chat";
+			sourceTree = "<group>";
+		};
+		B589F94D1EB85D9900868D12 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B589F93B1EB857D500868D12 /* ViewController.swift */,
+				B589F94B1EB85D8D00868D12 /* SignInViewController.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			files = (
 				B589F93C1EB857D500868D12 /* ViewController.swift in Sources */,
 				B589F93A1EB857D500868D12 /* AppDelegate.swift in Sources */,
+				B589F94C1EB85D8E00868D12 /* SignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +275,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SW5487L7J4;
 				INFOPLIST_FILE = "CP Chat/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.PKStudio.CP-Chat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,6 +289,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SW5487L7J4;
 				INFOPLIST_FILE = "CP Chat/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.PKStudio.CP-Chat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
