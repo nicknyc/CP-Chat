@@ -14,6 +14,8 @@ class ContactTableViewController: UITableViewController {
     let sessionId = UserDefaults.standard.string(forKey: "sessionId")!
     let sectionHeader = ["Friends"]
     
+    var targetname:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.getContactList()
@@ -81,7 +83,18 @@ class ContactTableViewController: UITableViewController {
         return self.sectionHeader[section]
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row < contacts.count{
+            self.targetname = contacts[indexPath.row]
+            performSegue(withIdentifier: "chat", sender: self)
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "chat"{
+            let dest = segue.destination as! ChatTableViewController
+            dest.targetname = self.targetname
+        }
     }
     
     

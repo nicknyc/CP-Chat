@@ -103,6 +103,7 @@
                     <navigationItem key="navigationItem" title="CP Chat" id="oyl-VP-CjK"/>
                     <connections>
                         <segue destination="rdc-LS-mHN" kind="show" identifier="addUser" id="KMH-qM-IgN"/>
+                        <segue destination="lwv-OR-JxA" kind="show" identifier="chat" id="4gX-Jm-BDe"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nmo-fO-VcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -136,6 +137,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eSO-zb-bfR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3150" y="179"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="8fN-g3-ZcQ">
+            <objects>
+                <tableViewController id="lwv-OR-JxA" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="TLM-Td-6tx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="2YV-QN-MGI">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2YV-QN-MGI" id="8Jx-kc-JgJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lwv-OR-JxA" id="XmX-ef-weX"/>
+                            <outlet property="delegate" destination="lwv-OR-JxA" id="lVc-2k-cBf"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Me-ZB-hXp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3150" y="968"/>
         </scene>
         <!--Friends-->
         <scene sceneID="7D4-wj-M77">
