@@ -18,7 +18,11 @@ class ChatTableViewController: UITableViewController {
     
     var updateTimer:Timer?
     
-    var messages:[Message] = [] //= ["test message","fjkaslhfdakjfhlajefhlaojlfhla;osjknflaiojflhasoi;dfjlashfojasljdhf;oakjdlsfj;oawijflidsi;ofjliuasdfklnaldisojfi;aslh;ofiaj;iasfoisaaasdfhjf;aoij;lfajksaiojaajsfja;oisfj"]
+    @IBOutlet weak var chatBox: UITextField!
+    @IBAction func sendMessage(_ sender: Any) {
+        self.sendMessageHandle()
+    }
+    var messages:[Message] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,12 +78,54 @@ class ChatTableViewController: UITableViewController {
     }
     
     func errorHandle(error:String){
-        let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
-        let doneAction = UIAlertAction(title: "Done", style: .default, handler: nil)
-        alert.addAction(doneAction)
-        self.present(alert, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+            let doneAction = UIAlertAction(title: "Done", style: .default, handler: nil)
+            alert.addAction(doneAction)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
+    func sendMessageHandle(){
+        let textMessage = self.chatBox.text
+        let session = URLSession.shared
+        
+        var request = URLRequest(url: CpMobileApi.postMessageUrl!)
+        request.httpMethod = "POST"
+        
+        let params = "sessionid=\(self.sessionId)&targetname=\(self.targetname!)&message=\(textMessage!)"
+        request.httpBody = params.data(using: String.Encoding.utf8)
+        
+        let task = session.dataTask(with: request as URLRequest, completionHandler: {
+            (data, response, error) in
+            if error != nil {
+                self.errorHandle(error: "Check your network connection and try again.")
+            }
+            else {
+                do {
+                    if let json = try JSONSerialization.jsonObject(with: data!) as? [String: AnyObject]
+                    {
+                        print(json)
+                        DispatchQueue.main.async {
+                            if(json["type"] as! String == "error"){
+                                self.errorHandle(error: json["content"] as! String)
+                            }else if(json["type"] as! String == "postMessage"){
+                                let result = json["content"] as! Bool
+                                if(result == true){
+                                    self.getMessage()
+                                    self.chatBox.text = ""
+                                }else{
+                                    self.errorHandle(error: "Something went wrong, please try again.")
+                                }
+                            }
+                        }
+                    }
+                }
+                catch { }
+            }
+        })
+        task.resume()
+    }
 
     func getMessage(){
         let session = URLSession.shared
@@ -100,7 +146,7 @@ class ChatTableViewController: UITableViewController {
                     if let json = try JSONSerialization.jsonObject(with: data!) as? [String: AnyObject]
                     {
                         print(json)
-                        //DispatchQueue.main.async {
+                        DispatchQueue.main.async {
                             if(json["type"] as! String == "error"){
                                 self.errorHandle(error: json["content"] as! String)
                             }else if(json["type"] as! String == "getMessage"){
@@ -116,7 +162,7 @@ class ChatTableViewController: UITableViewController {
                                 self.tableView.reloadData()
                                 return
                             }
-                        //}
+                        }
                     }
                 }
                 catch { }
@@ -139,5 +185,13 @@ struct Message{
         self.from = data["from"]!
         self.to = data["to"]!
         self.message = data["message"]!
+    }
+    
+    init(){
+        self.seqNo = ""
+        self.datetime = ""
+        self.from = ""
+        self.to = ""
+        self.message = ""
     }
 }

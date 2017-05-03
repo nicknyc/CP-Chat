@@ -159,7 +159,11 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </barButtonItem>
-                                <barButtonItem title="Send" id="suA-5V-aNw"/>
+                                <barButtonItem title="Send" id="suA-5V-aNw">
+                                    <connections>
+                                        <action selector="sendMessage:" destination="lwv-OR-JxA" id="aM3-oz-EDw"/>
+                                    </connections>
+                                </barButtonItem>
                             </items>
                         </toolbar>
                         <prototypes>
@@ -205,6 +209,9 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="chatBox" destination="hnz-IN-rey" id="u0l-CU-23R"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Me-ZB-hXp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
