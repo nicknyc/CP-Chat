@@ -101,10 +101,12 @@ class SearchTableViewController: UITableViewController {
     }
     
     func errorHandle(error:String){
-        let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
-        let doneAction = UIAlertAction(title: "Done", style: .default, handler: nil)
-        alert.addAction(doneAction)
-        self.present(alert, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+            let doneAction = UIAlertAction(title: "Done", style: .default, handler: nil)
+            alert.addAction(doneAction)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 
 }
