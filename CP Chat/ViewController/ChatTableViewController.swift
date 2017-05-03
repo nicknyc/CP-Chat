@@ -16,6 +16,8 @@ class ChatTableViewController: UITableViewController {
     
     var targetname:String?
     
+    var updateTimer:Timer?
+    
     var messages:[Message] = [] //= ["test message","fjkaslhfdakjfhlajefhlaojlfhla;osjknflaiojflhasoi;dfjlashfojasljdhf;oakjdlsfj;oawijflidsi;ofjliuasdfklnaldisojfi;aslh;ofiaj;iasfoisaaasdfhjf;aoij;lfajksaiojaajsfja;oisfj"]
     
     override func viewDidLoad() {
@@ -27,6 +29,15 @@ class ChatTableViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         
         self.getMessage()
+        
+        
+        self.updateTimer = Timer.scheduledTimer(withTimeInterval: 10, repeats: true, block: {_ in
+            self.getMessage()
+        })
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.updateTimer?.invalidate()
     }
     
 
