@@ -10,18 +10,25 @@ import UIKit
 
 class ChatTableViewController: UITableViewController {
 
+    let limit = 50
+    var seqNo = 0
+    let sessionId = UserDefaults.standard.string(forKey: "sessionId")!
+    
     var targetname:String?
+    
+    var messages:[Message] = [] //= ["test message","fjkaslhfdakjfhlajefhlaojlfhla;osjknflaiojflhasoi;dfjlashfojasljdhf;oakjdlsfj;oawijflidsi;ofjliuasdfklnaldisojfi;aslh;ofiaj;iasfoisaaasdfhjf;aoij;lfajksaiojaajsfja;oisfj"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.title = self.targetname!
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        tableView.estimatedRowHeight = 44.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+        self.getMessage()
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -32,67 +39,90 @@ class ChatTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return messages.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ChatCell
 
+        let message = messages[indexPath.row]
         // Configure the cell...
-
+        cell.textView.text = message.message
+        cell.timeView.text = message.datetime
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    func errorHandle(error:String){
+        let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+        let doneAction = UIAlertAction(title: "Done", style: .default, handler: nil)
+        alert.addAction(doneAction)
+        self.present(alert, animated: true, completion: nil)
     }
-    */
+    
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    func getMessage(){
+        let session = URLSession.shared
+        
+        var request = URLRequest(url: CpMobileApi.getMessageUrl!)
+        request.httpMethod = "POST"
+        
+        let params = "sessionid=\(self.sessionId)&seqno=\(self.seqNo)&limit=\(self.limit)"
+        request.httpBody = params.data(using: String.Encoding.utf8)
+        
+        let task = session.dataTask(with: request as URLRequest, completionHandler: {
+            (data, response, error) in
+            if error != nil {
+                self.errorHandle(error: "Check your network connection and try again.")
+            }
+            else {
+                do {
+                    if let json = try JSONSerialization.jsonObject(with: data!) as? [String: AnyObject]
+                    {
+                        print(json)
+                        //DispatchQueue.main.async {
+                            if(json["type"] as! String == "error"){
+                                self.errorHandle(error: json["content"] as! String)
+                            }else if(json["type"] as! String == "getMessage"){
+                                let content = json["content"] as! [[String: String]]
+                                self.messages = []
+                                for item in content{
+                                    print(item)
+                                    let message = Message(data: item)
+                                    if(message.from == self.targetname || message.to == self.targetname){
+                                        self.messages.append(message)
+                                    }
+                                }
+                                self.tableView.reloadData()
+                                return
+                            }
+                        //}
+                    }
+                }
+                catch { }
+            }
+        })
+        task.resume()
     }
-    */
+}
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+struct Message{
+    var seqNo:String
+    var datetime:String
+    var from:String
+    var to:String
+    var message:String
+    
+    init(data:[String:String]){
+        self.seqNo = data["seqno"]!
+        self.datetime = data["datetime"]!
+        self.from = data["from"]!
+        self.to = data["to"]!
+        self.message = data["message"]!
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

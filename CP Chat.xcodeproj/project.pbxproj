@@ -16,6 +16,7 @@
 		B589F9531EB88CF500868D12 /* CpMobileApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589F9521EB88CF500868D12 /* CpMobileApi.swift */; };
 		B589F9551EB8A34B00868D12 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589F9541EB8A34B00868D12 /* SearchTableViewController.swift */; };
 		B589F9571EB92B1600868D12 /* ChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589F9561EB92B1600868D12 /* ChatTableViewController.swift */; };
+		B589F9591EB98E9F00868D12 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B589F9581EB98E9F00868D12 /* ChatCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B589F9521EB88CF500868D12 /* CpMobileApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CpMobileApi.swift; sourceTree = "<group>"; };
 		B589F9541EB8A34B00868D12 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchTableViewController.swift; path = ViewController/SearchTableViewController.swift; sourceTree = "<group>"; };
 		B589F9561EB92B1600868D12 /* ChatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatTableViewController.swift; path = ViewController/ChatTableViewController.swift; sourceTree = "<group>"; };
+		B589F9581EB98E9F00868D12 /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				B589F9421EB857D500868D12 /* LaunchScreen.storyboard */,
 				B589F9451EB857D500868D12 /* Info.plist */,
 				B589F9521EB88CF500868D12 /* CpMobileApi.swift */,
+				B589F9581EB98E9F00868D12 /* ChatCell.swift */,
 			);
 			path = "CP Chat";
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				B589F93A1EB857D500868D12 /* AppDelegate.swift in Sources */,
 				B589F9551EB8A34B00868D12 /* SearchTableViewController.swift in Sources */,
 				B589F94C1EB85D8E00868D12 /* SignInViewController.swift in Sources */,
+				B589F9591EB98E9F00868D12 /* ChatCell.swift in Sources */,
 				B589F9531EB88CF500868D12 /* CpMobileApi.swift in Sources */,
 				B589F9571EB92B1600868D12 /* ChatTableViewController.swift in Sources */,
 			);

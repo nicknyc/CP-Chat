@@ -147,6 +147,8 @@ extension SearchTableViewController: UISearchResultsUpdating {
                 }
             })
             task.resume()
+        }else{
+            self.contacts = []
         }
     }
 }
