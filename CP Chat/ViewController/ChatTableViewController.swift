@@ -53,6 +53,10 @@ class ChatTableViewController: UITableViewController {
 
         let message = messages[indexPath.row]
         // Configure the cell...
+        if(message.from != self.targetname){
+            cell.textView.textAlignment = .right
+            cell.timeView.textAlignment = .right
+        }
         cell.textView.text = message.message
         cell.timeView.text = message.datetime
         return cell

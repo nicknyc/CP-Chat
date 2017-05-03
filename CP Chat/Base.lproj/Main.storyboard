@@ -171,26 +171,26 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bh4-Uv-YZt">
-                                            <rect key="frame" x="8" y="65" width="304" height="15"/>
+                                            <rect key="frame" x="8" y="55" width="304" height="15"/>
                                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sh9-5Y-S6m">
-                                            <rect key="frame" x="8" y="0.0" width="304" height="57"/>
+                                            <rect key="frame" x="8" y="10" width="304" height="37"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Sh9-5Y-S6m" firstAttribute="top" secondItem="8Jx-kc-JgJ" secondAttribute="top" id="2A4-LX-LO3"/>
                                         <constraint firstItem="Sh9-5Y-S6m" firstAttribute="leading" secondItem="8Jx-kc-JgJ" secondAttribute="leading" constant="8" id="8Ry-kI-4tZ"/>
                                         <constraint firstAttribute="trailing" secondItem="bh4-Uv-YZt" secondAttribute="trailing" constant="8" id="FTN-4I-8Cm"/>
+                                        <constraint firstAttribute="bottom" secondItem="bh4-Uv-YZt" secondAttribute="bottom" constant="10" id="PCJ-g2-lsT"/>
                                         <constraint firstItem="bh4-Uv-YZt" firstAttribute="top" secondItem="Sh9-5Y-S6m" secondAttribute="bottom" constant="8" id="V4W-6w-afy"/>
                                         <constraint firstItem="bh4-Uv-YZt" firstAttribute="leading" secondItem="8Jx-kc-JgJ" secondAttribute="leading" constant="8" id="W0c-bv-5Y2"/>
                                         <constraint firstAttribute="trailing" secondItem="Sh9-5Y-S6m" secondAttribute="trailing" constant="8" id="fEW-md-W7e"/>
-                                        <constraint firstAttribute="bottom" secondItem="bh4-Uv-YZt" secondAttribute="bottom" id="vBh-xd-77A"/>
+                                        <constraint firstItem="Sh9-5Y-S6m" firstAttribute="top" secondItem="8Jx-kc-JgJ" secondAttribute="top" constant="10" id="zaI-gp-SZT"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
