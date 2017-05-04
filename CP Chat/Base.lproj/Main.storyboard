@@ -44,7 +44,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zsa-pi-pHW">
-                                <rect key="frame" x="107" y="356" width="106" height="30"/>
+                                <rect key="frame" x="107" y="276" width="106" height="30"/>
                                 <state key="normal" title="Sign in"/>
                                 <connections>
                                     <action selector="signInClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o6n-Ga-X1W"/>
@@ -53,12 +53,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Zsa-pi-pHW" firstAttribute="top" secondItem="6bF-uZ-ZOL" secondAttribute="bottom" constant="8" id="1tq-YB-cq2"/>
                             <constraint firstItem="6bF-uZ-ZOL" firstAttribute="leading" secondItem="cec-tV-lAA" secondAttribute="leading" id="FbX-aA-FKf"/>
                             <constraint firstItem="6bF-uZ-ZOL" firstAttribute="top" secondItem="cec-tV-lAA" secondAttribute="bottom" constant="8" symbolic="YES" id="Lfw-lS-Fn1"/>
                             <constraint firstItem="Zsa-pi-pHW" firstAttribute="centerX" secondItem="6bF-uZ-ZOL" secondAttribute="centerX" id="LrS-DV-5FW"/>
                             <constraint firstItem="cec-tV-lAA" firstAttribute="leading" secondItem="BlM-Uh-RoO" secondAttribute="leading" id="OSW-Wx-hiO"/>
                             <constraint firstItem="cec-tV-lAA" firstAttribute="trailing" secondItem="BlM-Uh-RoO" secondAttribute="trailing" id="VJc-Wc-rQS"/>
-                            <constraint firstItem="Zsa-pi-pHW" firstAttribute="top" secondItem="6bF-uZ-ZOL" secondAttribute="bottom" constant="88" id="epl-Gu-qP1"/>
                             <constraint firstItem="6bF-uZ-ZOL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jtM-lb-ltm"/>
                             <constraint firstItem="cec-tV-lAA" firstAttribute="top" secondItem="BlM-Uh-RoO" secondAttribute="bottom" constant="8" symbolic="YES" id="lVX-Oe-h4O"/>
                             <constraint firstItem="Zsa-pi-pHW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="shG-61-O3N"/>
