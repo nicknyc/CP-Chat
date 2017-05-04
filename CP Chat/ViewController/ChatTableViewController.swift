@@ -32,8 +32,9 @@ class ChatTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 44.0
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        self.getMessage()
+        self.chatBox.becomeFirstResponder()
         
+        self.getMessage()
         
         self.updateTimer = Timer.scheduledTimer(withTimeInterval: 10, repeats: true, block: {_ in
             self.getMessage()
